@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="logo center">
+        <img src="{{url_for('static', filename='images/imagesearch.png')}}" alt="googlelogo">
+    </div>
+    <br>
+    <form class="center" action="http://images.google.com/images?um=1&hl=en&safe=active&nfpr=1&q">
+        <input class="RNNXgb" type="text" name="q"><br>
+        <button type="submit" class="btn btn-light">Google Search</button>
+    </form>
+{% endblock %}

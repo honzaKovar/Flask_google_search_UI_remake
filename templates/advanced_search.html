@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div>
+        <img style="float:left; padding: 8px;background: #F0F0F0;" src="{{url_for('static', filename='images/advlogo.png')}}" alt="googlelogo">
+    </div>
+    <div style="background: #F0F0F0;">
+        <p>&nbsp;</p><p>&nbsp;</p>
+    </div>
+    <div>
+        <h5 class="advanced">Advanced Search</h5>
+    </div>
+    <hr>
+    <div class="forms">
+        <p>Find pages with...</p>
+            <form style="font-size: small;" action="https://google.com/search">
+                all these words:<input type="text" name="q"><br>
+            </form>
+    </div>
+{% endblock %}
+
+<!--style="padding: 20px; padding-inline: 45px; font-family: arial,sans-serif;"-->
+<!--style="padding: 20px; padding-inline: 45px; font-family: arial,sans-serif;"-->
