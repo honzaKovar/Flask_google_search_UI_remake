@@ -1,5 +1,11 @@
 from flask import Flask, render_template
+from flask_caching import Cache
+
+
 app = Flask(__name__)
+# disables caching on the server
+cache = Cache(app, config={'CACHE_TYPE': 'null'})
+
 
 @app.route('/advanced')
 def search():
