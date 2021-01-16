@@ -7,7 +7,7 @@ app = Flask(__name__)
 cache = Cache(app, config={'CACHE_TYPE': 'null'})
 
 
-@app.route('/advanced')
+@app.route('/')
 def search():
     return render_template("index.html")
 
@@ -15,17 +15,17 @@ def search():
 def image_search():
     return render_template("image.html")
 
-@app.route('/')
+# https://www.google.com/advanced_search
+@app.route('/adv')
 def advanced_search():
     return render_template("advanced_search.html")
-#
-# # https://www.google.com/advanced_search
-#
-# @app.route('/')
-# def advanced_image_search():
-#     return render_template("index.html")
+# TODO
 
 # https://www.google.com/advanced_image_search
+@app.route('/adv_img')
+def advanced_image_search():
+    pass
+# TODO
 
 if __name__ == "__main__":
     app.run(debug=True)

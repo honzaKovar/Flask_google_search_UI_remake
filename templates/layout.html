@@ -6,6 +6,10 @@
     <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Search Engine</title>
+    <style>
+        {% block style %}
+        {% endblock %}
+    </style>
 </head>
 <body>
     {% block body %}

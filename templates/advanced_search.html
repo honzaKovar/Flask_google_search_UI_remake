@@ -1,4 +1,5 @@
 {% extends "layout.html" %}
+
 {% block body %}
     <div>
         <img style="float:left; padding: 8px;background: #F0F0F0;" src="{{url_for('static', filename='images/advlogo.png')}}" alt="googlelogo">
@@ -11,11 +12,10 @@
     </div>
     <hr>
     <div class="forms">
-        <p>Find pages with...</p>
+        <p>Find pages with... <span style="position: absolute; left: 600px;">To do this in the search box.</span></p>
             <form style="font-size: small;" action="https://google.com/search">
-                all these words:<input type="text" name="q"><br>
+                all these words:<input class="positioned txtinput" style="width: 300px; height: 25px;" type="text" name="q"><span style="position: absolute; left: 600px;color: #555;">Type the important words:</span>
+                <span style="position: absolute; left: 760px; color: #666;font-family: monospace; font-size: 11px;">tri-colour rat terrier</span><br>
             </form>
     </div>
 {% endblock %}
-
-<!--style="position: absolute; left: 300px; width: 482px;"-->
